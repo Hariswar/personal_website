@@ -1,17 +1,17 @@
 export const projects = [
   {
-  title: "XYZ",
+    title: "Health-Hack",
     description: "XYZ",
     image: "", //upload the image link here
-    technologies: ["XYZ", "XYZ", "XYZ", "XYZ"],
+    technologies: ["SQL", "HTML", "CSS", "Javascript"],
     githubUrl: "", // upload the github link here
     liveUrl: "" // upload the live link here
   }, 
   {
-    title: "XYZ",
+    title: "Leaguify",
     description: "XYZ",
     image: "", //upload the image link here
-    technologies: ["XYZ", "XYZ", "XYZ", "XYZ"],
+    technologies: ["Django", "Python", "HTML", "CSS", "SQLite"],
     githubUrl: "", // upload the github link here
     liveUrl: "" // upload the live link here
   },
