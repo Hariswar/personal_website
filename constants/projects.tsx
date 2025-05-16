@@ -16,10 +16,10 @@ export const projects = [
     liveUrl: "" // upload the live link here
   },
   {
-    title: "XYZ",
+    title: "Tic-Tac-Toe ncurses",
     description: "XYZ",
     image: "", //upload the image link here
-    technologies: ["XYZ", "XYZ", "XYZ", "XYZ"],
+    technologies: ["C++", "XYZ", "XYZ", "XYZ"],
     githubUrl: "", // upload the github link here
     liveUrl: "" // upload the live link here
   },
