@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "Hariswar Baburaj",
-  description: "A website built with Next.js and Tailwind CSS",
+  title: 'Hariswar Baburaj',
+  description: 'A website built with Next.js and Tailwind CSS',
 };
 
 export default function RootLayout({
