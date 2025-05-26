@@ -1,7 +1,7 @@
 export const socials = [
   {
     name : 'GitHub',
-    link : '' // Add the Github link here
+    link : 'https://github.com/Hariswar' 
   },
   {
     name : 'LinkedIn',
