@@ -5,7 +5,8 @@ export default function Home() {
     </h1>
   )
 }
-/*
+// This was a given code snippet for a Next.js app using Tailwind CSS.
+/* 
 import Image from "next/image";
 
 export default function Home() {
