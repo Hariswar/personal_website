@@ -16,5 +16,11 @@ export const jobExperience = [
     company: "XYZ",
     period: "none",
     description: "none"
+  }, 
+  {
+    title: "XYZ",
+    company: "XYZ",
+    period: "none",
+    description: "none"
   }
 ]; 
