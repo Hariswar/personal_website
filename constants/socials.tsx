@@ -5,7 +5,7 @@ export const socials = [
   },
   {
     name : 'LinkedIn',
-    link : '' // Add the LinkedIn link here
+    link : 'https://www.linkedin.com/in/hariswar-baburaj/'
   },
   {
     name : 'Instagram',
@@ -13,6 +13,6 @@ export const socials = [
   },
   {
     name : 'Email',
-    link : '' // Add the Facebook link here
+    link : 'mailto:bkhariswar@gmail.com' 
   }
 ]
