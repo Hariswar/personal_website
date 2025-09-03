@@ -9,7 +9,7 @@ export const socials = [
   },
   {
     name : 'Instagram',
-    link : '' // Add the Twitter link here
+    link : '' 
   },
   {
     name : 'Email',
