@@ -9,7 +9,7 @@ export const jobExperiences = [
     icon: ""
    },
    {
-    role: "",
+    title: "",
     company: "",
     location: "",
     period: "",
@@ -18,7 +18,7 @@ export const jobExperiences = [
     icon: ""
    },
    {
-    role: "",
+    tutle: "",
     company: "",
     location: "",
     period: "",
