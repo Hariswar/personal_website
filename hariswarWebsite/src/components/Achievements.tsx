@@ -3,27 +3,32 @@ import { Award, Code, Trophy, Github } from "lucide-react";
 
 const details = [
   {
+    // details 6 projects 
     icon: <Code className="w-6 h-6 text-blue-400" />,
     value: "6+ Projects",
     description: "Showcases my passion in computer science through real world projects.",
   },
   {
+    // details for the contributions 
     icon: <Github className="w-6 h-6 text-purple-400" />,
     value: "1.2k Contributions",
     description: "Includes all of my contributions with projects in Github.",
   },
   {
+    // details for the hackathons 
     icon: <Trophy className="w-6 h-6 text-yellow-400" />,
     value: "Hackathon Finalist",
     description: "Placed as a finalist out of 5 international hackathons I have participated.",
   },
   {
+    // details for the dean's list 
     icon: <Award className="w-6 h-6 text-emerald-400" />,
     value: "Dean's List",
-    description: "Showcases my academic excellense from freshman year to now.",
+    description: "Showcases my academic excellence from freshman year to now.",
   },
 ];
 
+// displays everything and calls the above. 
 export const Achievements = () => {
   return (
     <div className="mt-16 max-w-4xl mx-auto">
