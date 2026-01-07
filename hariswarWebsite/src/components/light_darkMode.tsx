@@ -8,7 +8,7 @@ export const Modes = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="-mr-10 p-1.5 rounded-full border border-[#FBBF24]/50 hover:border-[#FBBF24] hover:bg-[#FBBF24]/10 transition-all duration-300"
+      className="-ml-4 p-1.5 rounded-full border border-[#FBBF24]/50 hover:border-[#FBBF24] hover:bg-[#FBBF24]/10 transition-all duration-300"
       aria-label="Toggle theme"
     >
       {/* The icon would change based on the dark or light mode */}
