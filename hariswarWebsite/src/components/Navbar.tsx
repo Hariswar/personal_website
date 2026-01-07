@@ -3,30 +3,30 @@ import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "@/contexts/ThemeContext";
 
+// This Navbar component conditionally renders a "Research Paper" link
 const Navbar = () => {
-  const location = useLocation();
-  const isResearchPaperPage = location.pathname === "/research-paper";
+  const { pathname } = useLocation();
   const { theme } = useTheme();
 
+  const researchLink = pathname !== "/research-paper";
+
+  const setup = cn(
+    "px-10 py-5",
+    "bg-transparent text-[#FBBF24]",
+    "rounded-md border-2 border-[#FBBF24]",
+    "hover:bg-[#FBBF24]/10 transition-all duration-300",
+    "font-medium text-base tracking-wide",
+    "hover:scale-105 transition-transform duration-200",
+    "animate-fade-in"
+  );
+
   return (
-    <nav className="w-full flex items-center justify-between py-4 mb-8">
-      <div className="flex items-center">
-        {/* Left side empty */}
-      </div>
-      <div className="flex items-center space-x-4">
-        {!isResearchPaperPage && (
-          <Link
-            to="/research-paper"
-            className={cn(
-              "px-10 py-5",
-              "bg-transparent text-[#FBBF24]",
-              "rounded-md border-2 border-[#FBBF24]",
-              "hover:bg-[#FBBF24]/10 transition-all duration-300",
-              "font-medium text-base tracking-wide",
-              "hover:scale-105 transition-transform duration-200",
-              "animate-fade-in"
-            )}
-          >
+    <nav className="w-full mb-8 py-4 flex items-center justify-between">
+      <div className="flex items-center" />
+
+      <div className="flex items-center gap-4">
+        {researchLink && (
+          <Link to="/research-paper" className={setup}>
             Research Paper
           </Link>
         )}
