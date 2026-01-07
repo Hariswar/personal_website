@@ -11,8 +11,8 @@ const details = [
   {
     // details for the contributions 
     icon: <Github className="w-6 h-6 text-purple-400" />,
-    value: "1.2k Contributions",
-    description: "Includes all of my contributions with projects in Github.",
+    value: "231 Contributions",
+    description: "Last year contributions with projects in Github.",
   },
   {
     // details for the hackathons 
