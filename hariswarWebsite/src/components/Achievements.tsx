@@ -11,7 +11,7 @@ const details = [
   {
     // details for the contributions 
     icon: <Github className="w-6 h-6 text-purple-400" />,
-    value: "231 Contributions",
+    value: "230+ Contributions",
     description: "Last year contributions with projects in Github.",
   },
   {
