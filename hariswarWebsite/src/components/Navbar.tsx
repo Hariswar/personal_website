@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./light_darkMode";
 import { useTheme } from "@/contexts/ThemeContext";
 
 // This Navbar component conditionally renders a "Research Paper" link
@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="w-full mb-8 py-4 flex items-center justify-between">
       <div className="flex items-center" />
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         {researchLink && (
           <Link to="/research-paper" className={setup}>
             Research Paper
