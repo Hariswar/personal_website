@@ -83,9 +83,6 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
     }
   }, [currentMessageIndex, currentCharIndex, isActive]);
 
-  const isCurrentlyTyping = isActive && currentMessageIndex < informationInTerminal.length &&
-    currentCharIndex < informationInTerminal[currentMessageIndex]?.text.length;
-
   // Syntax highlighting helper
   const renderSyntaxHighlight = (text: string, isUser: boolean) => {
     if (isUser) {
@@ -101,7 +98,6 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
       }
       // Highlight keywords
       const keywords = ['I', "I'm", 'Hello', 'Let'];
-      let result = part;
       keywords.forEach(keyword => {
         if (part.includes(keyword)) {
         }

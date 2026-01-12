@@ -11,7 +11,7 @@ const Introduction = ({ onComplete }: IntroductionProps) => {
   const [displayedPrefix, setDisplayedPrefix] = useState('');
   const [displayedRole, setDisplayedRole] = useState('');
   const [showRole, setShowRole] = useState(false);
-  const [typingComplete, setTypingComplete] = useState(false);
+  const [, setTypingComplete] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {

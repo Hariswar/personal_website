@@ -6,7 +6,7 @@ import { useTheme } from "@/Theme/darkLight";
 // This Navbar component conditionally renders a "Research Paper" link
 const Navbar = () => {
   const { pathname } = useLocation();
-  const { theme } = useTheme();
+  useTheme();
 
   const researchLink = pathname !== "/research-paper";
 
