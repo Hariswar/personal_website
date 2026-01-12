@@ -10,7 +10,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../build',  // <- note: output goes to repo root /build
+    outDir: 'dist',
   },
 });
+
 
