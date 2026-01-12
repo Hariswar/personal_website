@@ -1,5 +1,5 @@
 import { Moon, Sun } from 'lucide-react';
-import { useTheme } from '@/contexts/ThemeContext';
+import { useTheme } from '@/Theme/darkLight';
 
 // A button to switch between light and dark modes. 
 export const Modes = () => {

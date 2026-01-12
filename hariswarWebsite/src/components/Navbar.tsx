@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./light_darkMode";
-import { useTheme } from "@/contexts/ThemeContext";
+import { useTheme } from "@/Theme/darkLight";
 
 // This Navbar component conditionally renders a "Research Paper" link
 const Navbar = () => {

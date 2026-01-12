@@ -3,7 +3,7 @@ export const projects = [
     title: "", 
     description: "", 
     image: "",
-    technologies: "",
+    technologies: [],
     githubUrl: "",
     liveUrl: ""
   },
@@ -11,7 +11,7 @@ export const projects = [
     title: "", 
     description: "", 
     image: "",
-    technologies: "",
+    technologies: [],
     githubUrl: "",
     liveUrl: ""
   },
@@ -19,7 +19,7 @@ export const projects = [
     title: "", 
     description: "", 
     image: "",
-    technologies: "",
+    technologies: [],
     githubUrl: "",
     liveUrl: ""
   },
@@ -27,7 +27,7 @@ export const projects = [
     title: "", 
     description: "", 
     image: "",
-    technologies: "",
+    technologies: [],
     githubUrl: "",
     liveUrl: ""
   },
@@ -35,7 +35,7 @@ export const projects = [
     title: "", 
     description: "", 
     image: "",
-    technologies: "",
+    technologies: [],
     githubUrl: "",
     liveUrl: ""
   },

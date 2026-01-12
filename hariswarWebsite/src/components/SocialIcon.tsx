@@ -1,7 +1,7 @@
 import { socials } from "@/constants/socials";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { useTheme } from "@/contexts/ThemeContext";
+import { useTheme } from "@/Theme/darkLight";
 
 // Included the all the socials that I use 
 const socialIcon = {
