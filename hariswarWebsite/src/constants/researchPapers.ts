@@ -13,7 +13,7 @@ export const researchPapers = [
     pdfUrl: ""
   },
   {
-    id: 1,
+    id: 2,
     title: "",
     description: "", 
     image: "",
@@ -27,7 +27,7 @@ export const researchPapers = [
     
   }, 
   {
-    id: 1,
+    id: 3,
     title: "",
     description: "", 
     image: "",
@@ -41,7 +41,7 @@ export const researchPapers = [
     
   },
   {
-    id: 1,
+    id: 4,
     title: "",
     description: "", 
     image: "",

@@ -22,17 +22,8 @@ export const jobExperiences = [
     company: "Missouri University of Science and Technology",
     location: "Rolla, MO",
     period: "Aug 2023 - May 2024",
-    description: "Led and supported a floor of 20+ students, developing a friendly and welcoming atmosphere. Both of the floor governors are intended to create a positive and welcoming community where the students feel comfortable living together. We also collaborate with staffs to make sure the repairs are handled quickly and everything is in perfect condition. Look out for students needs in terms of resources and also connect them with right person/services",
+    description: "Led and supported a floor of 20+ students, developing a friendly and welcoming atmosphere. Both of the floor governors are intended to create a positive and welcoming community where the students feel comfortable living together. We also collaborate with staffs to make sure the repairs are handled quickly and everything is in perfect condition. Look out for students needs in terms of resources and also connect them with right person/services.",
     technologies: ["Communication", "Leadership", "Project Management"],
-    icon: ""
-   },
-   {
-    title: "",
-    company: "",
-    location: "",
-    period: "",
-    description: "",
-    technologies: [],
     icon: ""
    }
 ]; 
