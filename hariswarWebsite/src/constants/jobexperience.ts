@@ -5,7 +5,7 @@ export const jobExperiences = [
     location: "Rolla, MO",
     period: "August 2025 - Decemeber 2025",
     description: "Developing autograders and test cases for homework and assignments, allowing students to receive instant feedback by successfully running through the test cases and able to see their scores for the assignment immediately. Reducing manual grading effort by 80% for the professors and graders. Working with other grader to brainstorm and create homework questions to make sure students have been able to understand key concepts.", 
-    technologies: ["Python", "Github"],
+    technologies: ["Python", "Github", "Leadership", "Communication"],
     icon: ""
    },
    {
@@ -18,16 +18,16 @@ export const jobExperiences = [
     icon: ""
    },
    {
-    tutle: "",
-    company: "",
-    location: "",
-    period: "",
-    description: "",
-    technologies: [],
+    title: "Thomas jefferson Hall Governor",
+    company: "Missouri University of Science and Technology",
+    location: "Rolla, MO",
+    period: "Aug 2023 - May 2024",
+    description: "Led and supported a floor of 20+ students, developing a friendly and welcoming atmosphere. Both of the floor governors are intended to create a positive and welcoming community where the students feel comfortable living together. We also collaborate with staffs to make sure the repairs are handled quickly and everything is in perfect condition. Look out for students needs in terms of resources and also connect them with right person/services",
+    technologies: ["Communication", "Leadership", "Project Management"],
     icon: ""
    },
    {
-    tutle: "",
+    title: "",
     company: "",
     location: "",
     period: "",
