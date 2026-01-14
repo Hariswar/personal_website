@@ -22,7 +22,7 @@ export const projects = [
     githubUrl: "https://github.com/Hariswar/data-holics",
   },
   {
-    title: "", 
+    title: "Compute-Energy Convergence in a DEG World", 
     description: "", 
     image: "",
     technologies: [],
