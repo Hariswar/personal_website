@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Nourishly", 
     description: "A nutrition website that helps students and staffs to track meals, discover healthy options and build a healthy lifestyle. Nourishly will help students to be more informed about what they are eating by tracking their macronutrients, and manage their dining funds. It will include features such as a clean UI to view menus with clear nutritional facts. It will allow students to easily view and manage their funds, such as their meal swipes and Declining Balance Dollars (DBDs)", 
-    image: "",
+    image: "./Nourishly.png",
     technologies: ["Angular","C#",".NET", "PostgreSQL"],
     githubUrl: "https://github.com/Hariswar/Nourishly",
   },
@@ -17,7 +17,7 @@ export const projects = [
    {
     title: "Leaguify", 
     description: "Developed a full stack web application with a tracking system that allows users to log game results, compare rankings, and track performance against friends and across a variety of different games. It allows users to create profiles, join teams, and log scores for solo or team games. Developed database will allow users to access, compare, and edit their scores easily.", 
-    image: "",
+    image: "./Leaguify.png",
     technologies: ["Django", "HTML", "Cascading Style Sheets", "SQL", "Python"],
     githubUrl: "https://github.com/Hariswar/data-holics",
   },
