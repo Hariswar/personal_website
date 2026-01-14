@@ -15,12 +15,11 @@ export const projects = [
     liveUrl: "https://sketch-to-sky-ui.vercel.app/"
   },
    {
-    title: "", 
-    description: "", 
+    title: "Leaguify", 
+    description: "Developed a full stack web application with a tracking system that allows users to log game results, compare rankings, and track performance against friends and across a variety of different games. It allows users to create profiles, join teams, and log scores for solo or team games. Developed database will allow users to access, compare, and edit their scores easily.", 
     image: "",
-    technologies: [],
-    githubUrl: "",
-    liveUrl: ""
+    technologies: ["Django", "HTML", "Cascading Style Sheets", "SQL", "Python"],
+    githubUrl: "https://github.com/Hariswar/data-holics",
   },
   {
     title: "", 
