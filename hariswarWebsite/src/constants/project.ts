@@ -24,10 +24,10 @@ export const projects = [
   {
     title: "Compute-Energy Convergence in a DEG World", 
     description: "Agentic Orchestration System designed to co-optimize AI compute workloads and energy resources in a Distributed Energy Generation (DEG) environment. The core is a Grid Co-optimization Agent utilizing a Machine Learning model to predict the optimal action (Run, Defer, or Use Storage) based on real-time compute demand, energy price, and carbon intensity. The system minimizes £/inference while adhering to a carbon cap. All communication between the Compute, Grid, and Storage Agents is handled via the Beckn Protocol, ensuring interoperable, auditable, and traceable transactions (with OBP IDs) for monetizing compute flexibility under schemes like P415. This autonomous approach prevents grid destabilization and transforms flexible compute into a valuable grid asset, minimizes £/inference while adhering to a carbon cap. All communication between the Compute, Grid, and Storage Agents is handled via the Beckn Protocol, ensuring interoperable, auditable, and traceable transactions (with OBP IDs) for monetizing compute flexibility under schemes like P415. This autonomous approach prevents grid destabilization and transforms flexible compute into a valuable grid asset.", 
-    image: "",
+    image: "./computeEnergy.png",
     technologies: ["Python"], 
     githubUrl: "https://github.com/SwapnilMurat/Agentic-Orchestration-System",
-    liveUrl: ""
+    liveUrl: "https://beckn-spark-ignition.lovable.app/"
   },
   {
     title: "", 
