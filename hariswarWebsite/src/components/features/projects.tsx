@@ -15,7 +15,7 @@ export const Projects = () => {
         Projects
       </h2>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 pb-6 overflow-y-auto items-start"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-y-auto items-start"
         style={{
           maxHeight: "calc(100vh - 80px)",
           paddingRight: "3px"
@@ -28,12 +28,12 @@ export const Projects = () => {
             className="animate-fade-in"
           >
             <div
-              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 ${
+              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 h-full ${
                 theme === 'dark'
                   ? 'bg-[#111] border border-gray-800 hover:border-yellow-500/50'
                   : 'bg-gray-50 border border-gray-200 hover:border-yellow-400'
               } w-full hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] hover:brightness-125`}
-              style={{ animationDelay: `${idx * 0.1}s` }}
+              style={{ animationDelay: `${idx * 0.1}s`, minHeight: "500px" }}
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -57,12 +57,12 @@ export const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} mb-6 text-sm leading-relaxed`}>
+                <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} mb-4 text-sm leading-relaxed line-clamp-2`}>
                   {project.description}
                 </p>
 
                 <div className="mt-auto">
-                  <div className="mb-6">
+                  <div className="mb-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
