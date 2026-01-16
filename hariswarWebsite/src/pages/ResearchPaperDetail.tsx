@@ -34,12 +34,12 @@ const ResearchPaperDetail = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6 animate-fade-in">
           <Link to="/research-paper">
-            <Button 
-              variant="ghost" 
-              className="pl-0 bg-transparent text-[#FBBF24] hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
-            >
-              <ArrowLeft />
-              Back to Research Papers 
+            <Button
+              variant="ghost"
+              className="pl-0 bg-transparent text-[#FBBF24] text-lg md:text-xl hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
+              >
+                <ArrowLeft className="mr-2" />
+                Back to Research Papers
             </Button>
           </Link>
         </div>
