@@ -16,13 +16,13 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
   const informationInTerminal = [
     { text: "Hello, I'm Hariswar!", isUser: false },
     { text: "Where do you study?", isUser: true },
-    { text: "I am studying Computer Science at Missouri University of Science and Technology", isUser: false },
+    { text: "I am pursuing Bachelors of Science in Computer Science at Missouri University of Science and Technology, with a minor in Applied Mathematics.", isUser: false },
     { text: "What do you do?", isUser: true },
-    { text: "I'm a .", isUser: false }, // I have to finish this
+    { text: "I'm currently doing undergraduate research in Missouri University of Science and Technology. Also looking to apply my skills through building projects.", isUser: false },
     { text: "What are you involved in?", isUser: true },
-    { text: "I", isUser: false }, // I have to finish this
+    { text: "I'm actively participating and contributing in hackathons that is hosted around the world.", isUser: false }, 
     { text: "What's next?", isUser: true },
-    { text: "I'm seeking opportunities to apply my skills in real-world situations", isUser: false } // I have to finish this 
+    { text: "I'm seeking opportunities to apply my skills in real-world situations", isUser: false }
   ];
 
   // Start typing animation when the terminal prop changes
