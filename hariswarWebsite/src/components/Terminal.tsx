@@ -22,7 +22,7 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
     { text: "What are you involved in?", isUser: true },
     { text: "I'm actively participating and contributing in hackathons that is hosted around the world.", isUser: false }, 
     { text: "What's next?", isUser: true },
-    { text: "I'm seeking opportunities to apply my skills in real-world situations", isUser: false }
+    { text: "I'm seeking opportunities to apply my skills in real-world situations.", isUser: false }
   ];
 
   // Start typing animation when the terminal prop changes
