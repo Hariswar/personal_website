@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: "Nourishly", 
-    description: "A nutrition website that helps students and staffs to track meals, discover healthy options and build a healthy lifestyle. Nourishly will help students to be more informed about what they are eating by tracking their macronutrients, and manage their dining funds. It will include features such as a clean UI to view menus with clear nutritional facts. It will allow students to easily view and manage their funds, such as their meal swipes and Declining Balance Dollars (DBDs)", 
+    description: "A nutrition website that helps students and staffs to track meals, discover healthy options and build a healthy lifestyle. Nourishly will help students to be more informed about what they are eating by tracking their macronutrients, and manage their dining funds. It will include features such as a clean UI to view menus with clear nutritional facts. It will allow students to easily view and manage their funds, such as their meal swipes and Declining Balance Dollars (DBDs).", 
     image: "./Nourishly.png",
     technologies: ["Angular","C#",".NET", "PostgreSQL"],
     githubUrl: "https://github.com/Hariswar/Nourishly",
@@ -29,12 +29,26 @@ export const projects = [
     githubUrl: "https://github.com/SwapnilMurat/Agentic-Orchestration-System",
     liveUrl: "https://beckn-spark-ignition.lovable.app/"
   },
-  {
-    title: "", 
-    description: "", 
+    {
+    title: "Health-Hack", 
+    description: "Health-Hack is a health and wellness platform game that turns the user from manually focusing on self-care to a retro gaming style! Basically, our game is inspired by Cookie Clicker. We developed a Mario-inspired clicker game, where players click on coins to earn in-game currency. These coins can be spent on power-ups like: Mushrooms - Makes Mario grow bigger, Fire Flower - Allows Mario to shoot fireballs and more!", 
     image: "",
-    technologies: [],
-    githubUrl: "",
-    liveUrl: ""
+    technologies: ["HTML", "CSS", "JavaScript"], 
+    githubUrl: "https://github.com/Hariswar/Health-Hack",
+    liveUrl: "https://devpost.com/software/health-hack-w8u60p",
+  },
+  {
+    title: "Tic-Tac-Toe with Ncurses", 
+    description: "Designed and implemented a Tic-Tac-Toe game in C++ using the Ncurses library for terminal-based graphical representation, with board sizes ranging from 3x3 to 9x9. I used the feature called Ncurses which integrating ncurses for the main gameplay loop and utilizing the mouse interactions feature to allow users to click on the square to play on it. It provides an interactive experience where players can choose board dimensions and play the game in the terminal.", 
+    image: "",
+    technologies: ["C++", "Ncurses"],
+    githubUrl: "https://github.com/Hariswar/Tic-Tac-Toe-with-Ncurses",
+  },
+  {
+    title: "ButtonClick", 
+    description: "This is an simple button clicking game which challenges your clicking speed and accuracy. Compete with yourself or others to see how many clicks you can achieve in a set of time.", 
+    image: "",
+    technologies: ["HTML"],
+    githubUrl: "https://github.com/Hariswar/ButtonClick/blob/main/buttonclick.html",
   },
 ]
