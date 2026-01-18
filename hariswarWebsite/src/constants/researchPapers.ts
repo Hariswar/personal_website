@@ -39,7 +39,7 @@ export const researchPapers = [
     id: 4,
     title: "Microcontrollers in Smartwatches (Apple Watch, Fitbit, Samsung Galaxy)",
     description: "Researching and analyzing the microcontrollers that is used in Smartwatches especially with Apple Watch, Fitbit and Samsung Galaxy.",  
-    image: "",
+    image: "/micro.png",
     authors: ["Hariswar Baburaj"],
     publicationDate: "September 2025",
     journal: "Missouri University of Science and Technology",
