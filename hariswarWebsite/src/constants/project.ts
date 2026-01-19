@@ -51,4 +51,11 @@ export const projects = [
     technologies: ["HTML"],
     githubUrl: "https://github.com/Hariswar/ButtonClick/blob/main/buttonclick.html",
   },
+  {
+    title: "Urban-Jewel-Heist-Simulation", 
+    description: "Developed a complex, multi-class simulation in C++ where robbers, police, and scattered jewels interact within a 2D city grid.", 
+    image: "",
+    technologies: ["C++"],
+    githubUrl: "https://github.com/Hariswar/Urban-Jewel-Heist-Simulation",
+  }
 ]
