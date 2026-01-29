@@ -1,5 +1,14 @@
 export const jobExperiences = [
   {
+    title: "",
+    company: "Missouri University of Science and Technology",
+    location: "Rolla, MO",
+    period: "",
+    description: "", 
+    technologies: [""],
+    icon: ""
+  },
+  {
     title: "Grader - Theory of Computer Science",
     company: "Missouri University of Science and Technology",
     location: "Rolla, MO",
