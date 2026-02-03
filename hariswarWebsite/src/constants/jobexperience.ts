@@ -5,7 +5,7 @@ export const jobExperiences = [
     location: "Rolla, MO",
     period: "January 2026 - Present",
     description: "", 
-    technologies: [""],
+    technologies: ["Python", "Excell", "Latex"],
     icon: ""
   },
   {
