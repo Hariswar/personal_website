@@ -1,9 +1,9 @@
 export const jobExperiences = [
   {
-    title: "",
+    title: "CEC Undergraduate Research Scholars(URS)",
     company: "Missouri University of Science and Technology",
     location: "Rolla, MO",
-    period: "",
+    period: "January 2026 - Present",
     description: "", 
     technologies: [""],
     icon: ""
