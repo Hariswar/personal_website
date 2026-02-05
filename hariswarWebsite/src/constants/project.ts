@@ -10,7 +10,7 @@ export const projects = [
     title: "Sketch to Sky", 
     description: "Sketch-to-Sky, a tool where you provide a prompt and the AI generates a 3D model of an aircraft component with features like camera view, ability to rotate, upload your own model and many more.", 
     image: "./sketch_to_sky_Proj.jpeg",
-    technologies: [],
+    technologies: ["React","TypeScript", "Vite", "Python", "Vertex AI"],
     githubUrl: "https://github.com/Hariswar/AI-Global-Hackathon",
     liveUrl: "https://sketch-to-sky-ui.vercel.app/"
   },
