@@ -32,7 +32,7 @@ export const projects = [
     {
     title: "Health-Hack", 
     description: "Health-Hack is a health and wellness platform game that turns the user from manually focusing on self-care to a retro gaming style! Basically, our game is inspired by Cookie Clicker. We developed a Mario-inspired clicker game, where players click on coins to earn in-game currency. These coins can be spent on power-ups like: Mushrooms - Makes Mario grow bigger, Fire Flower - Allows Mario to shoot fireballs and more!", 
-    image: "",
+    image: "./Health_Hack.png",
     technologies: ["HTML", "CSS", "JavaScript"], 
     githubUrl: "https://github.com/Hariswar/Health-Hack",
     liveUrl: "https://devpost.com/software/health-hack-w8u60p",
