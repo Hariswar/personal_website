@@ -4,7 +4,7 @@ export const jobExperiences = [
     company: "Missouri University of Science and Technology",
     location: "Rolla, MO",
     period: "January 2026 - Present",
-    description: "", 
+    description: "We submitted a research paper on an Emperical Study of Vulnerabilities in GitHub Security Advisorites. We analyzed the 295 Github, 
     technologies: ["Python", "Excell", "Latex"],
     icon: ""
   },
