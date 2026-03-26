@@ -12,7 +12,6 @@ export const projects = [
     image: "./sketch_to_sky_Proj.jpeg",
     technologies: ["React","TypeScript", "Vite", "Python", "Vertex AI"],
     githubUrl: "https://github.com/Hariswar/AI-Global-Hackathon",
-    liveUrl: "https://sketch-to-sky-ui.vercel.app/"
   },
    {
     title: "Leaguify", 
