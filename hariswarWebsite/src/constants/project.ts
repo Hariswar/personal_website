@@ -39,7 +39,7 @@ export const projects = [
   {
     title: "Tic-Tac-Toe with Ncurses", 
     description: "Designed and implemented a Tic-Tac-Toe game in C++ using the Ncurses library for terminal-based graphical representation, with board sizes ranging from 3x3 to 9x9. I used the feature called Ncurses which integrating ncurses for the main gameplay loop and utilizing the mouse interactions feature to allow users to click on the square to play on it. It provides an interactive experience where players can choose board dimensions and play the game in the terminal.", 
-    image: "",
+    image: "./tic_tac_toe.png",
     technologies: ["C++", "Ncurses"],
     githubUrl: "https://github.com/Hariswar/Tic-Tac-Toe-with-Ncurses",
   },
