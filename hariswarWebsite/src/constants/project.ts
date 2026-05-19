@@ -1,9 +1,9 @@
 export const projects = [
   {
     title: "Tempo", 
-    description: "", 
-    image: "",
-    technologies: [""],
+    description: "The main objective of Tempo is to change calendar management from a manual process to an agentic system that only require human approval. The system is developed to automatically detect scheduling issues and inefficiencies during event creation. The agent is then able to provide suggestions of different time slots with the added context of user behavior such as the type of meeting and the location of the users. Tempo can suggest solutions, track locations and can understand the context of events like what kind of meeting it is and how important it is based on user;s preference. Overall, Tempo is an AI Smart Calendar app that detects and solves conflicts as they happen by providing optimized aternatives instead of just making manual decisions.", 
+    image: "./Tempo.png",
+    technologies: ["React, TypeScript", "Vite", "Tailwind CSS", "Groq", "Llama-3.3-70B"],
     githubUrl: "",
   },
   /*
