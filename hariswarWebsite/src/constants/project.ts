@@ -12,7 +12,7 @@ export const projects = [
     image: "",
     technologies: [""],
     githubUrl: "",
-  }
+  },
   /*
   {
     title: "Detecting Misinformation with Explainable AI and Test Classification", 
