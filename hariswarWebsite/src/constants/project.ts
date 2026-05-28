@@ -6,6 +6,13 @@ export const projects = [
     technologies: ["React, TypeScript", "Vite", "Tailwind CSS", "Groq", "Llama-3.3-70B"],
     githubUrl: "",
   },
+  {
+    title: "Steam Review Analyzer", 
+    description: "", 
+    image: "",
+    technologies: [""],
+    githubUrl: "",
+  }
   /*
   {
     title: "Detecting Misinformation with Explainable AI and Test Classification", 
