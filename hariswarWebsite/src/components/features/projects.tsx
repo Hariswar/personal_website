@@ -57,7 +57,7 @@ export const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} mb-4 text-sm leading-relaxed line-clamp-2`}>
+                <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} mb-4 text-sm leading-relaxed line-clamp-4`}>
                   {project.description}
                 </p>
 
