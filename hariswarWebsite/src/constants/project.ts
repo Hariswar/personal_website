@@ -11,7 +11,7 @@ export const projects = [
     description: "Steam hosts over 130,000 different games, with each averaging hundreds of reviews, with more popular games reaching the tens of thousands. SRA is a application where user can search any game available on steam. SRA will scrape reviews from steam and analyze the sentiment on a topic level where some topics are predefined, like graphics, and and gameplay. Some other topics are added based on frequency of appearance in the reviews. The output gives you ratio of sentiment on individual clusters, positive, neutral, and negative, common appearing words with mention count, and examples from each", 
     image: "./lethal_company.png",
     technologies: ["React", "Vite", "TypeScript", "Python", "all-MiniLM-L6-v2", "BERTopic", "Sentiment Analysis"],
-    githubUrl: "",
+    githubUrl: "https://github.com/Hariswar/PlantLCK",
   },
   /*
   {
