@@ -15,7 +15,7 @@ export const Projects = () => {
         Projects
       </h2>
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-y-auto items-start"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-y-auto"
         style={{
           maxHeight: "calc(100vh - 80px)",
           paddingRight: "3px"
@@ -25,7 +25,7 @@ export const Projects = () => {
           <Scroll
             key={idx}
             speed={0.03 * (idx % 2 === 0 ? 1 : -1)}
-            className="animate-fade-in"
+            className="animate-fade-in h-full"
           >
             <div
               className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 h-full ${
@@ -33,13 +33,13 @@ export const Projects = () => {
                   ? 'bg-[#111] border border-gray-800 hover:border-yellow-500/50'
                   : 'bg-gray-50 border border-gray-200 hover:border-yellow-400'
               } w-full hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] hover:brightness-125`}
-              style={{ animationDelay: `${idx * 0.1}s`, minHeight: "500px" }}
+              style={{ animationDelay: `${idx * 0.1}s` }}
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="relative w-full h-64 bg-black/10 overflow-hidden">
                 <img
-                  src={project.image} // Project image
+                  src={project.image}
                   alt={project.title} 
                   className={`w-full h-full object-cover transition-transform duration-500 ${
                     hoveredIndex === idx ? 'scale-105' : 'scale-100'
