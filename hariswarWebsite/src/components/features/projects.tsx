@@ -28,12 +28,12 @@ export const Projects = () => {
             className="animate-fade-in"
           >
             <div
-              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 ${
+              className={`flex flex-col rounded-2xl overflow-hidden transition-all duration-300 h-full ${
                 theme === 'dark'
                   ? 'bg-[#111] border border-gray-800 hover:border-yellow-500/50'
                   : 'bg-gray-50 border border-gray-200 hover:border-yellow-400'
               } w-full hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] hover:brightness-125`}
-              style={{ animationDelay: `${idx * 0.1}s` }}
+              style={{ animationDelay: `${idx * 0.1}s`, minHeight: "500px" }}
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
