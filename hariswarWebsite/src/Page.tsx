@@ -2,6 +2,7 @@ import Experience from "@/components/features/experience";
 import Footer from "@/components/SocialIcon";
 import Projects from "@/components/features/projects";
 import Contact from "@/components/Achievements";
+import Certifications from "@/components/features/certifications";
 import Layout from "@/layout";
 import ChatBox from "@/components/Terminal"; 
 import TypedIntro from "@/components/Introduction";
@@ -49,6 +50,10 @@ const Page = () => {
 
             <Scroll speed={0.01}>
               <Contact />
+            </Scroll>
+
+            <Scroll speed={0.01}>
+              <Certifications />
             </Scroll>
 
             <Footer />
