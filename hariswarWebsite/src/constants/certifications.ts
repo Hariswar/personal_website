@@ -5,11 +5,11 @@ export const certifications = [
   },
   {
     title: "Fundamentals of Deep Learning",
-    url: "#",
+    url: "Fundamentals_of_deep.pdf",
   },
   {
     title: "Getting Started with Deep Learning",
-    url: "#",
+    url: "Getting_started.pdf",
   },
   {
     title: "HackerRank - Java Certificate",
@@ -25,10 +25,10 @@ export const certifications = [
   },
   {
     title: "Disaster Risk Monitoring Using Satellite Imagery",
-    url: "#",
+    url: "disasterRisk.pdf",
   },
     {
     title: "Building RAG Agents with LLMs",
-    url: "#",
+    url: "buildingRag.pdf",
   },
 ];
