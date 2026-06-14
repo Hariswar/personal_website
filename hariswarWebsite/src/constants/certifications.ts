@@ -1,7 +1,7 @@
 export const certifications = [
   {
     title: "HackerRank - Python Certificate",
-    url: "#",
+    url: "https://www.hackerrank.com/certificates/dcdd0a15af38",
   },
   {
     title: "Fundamentals of Deep Learning",
@@ -13,7 +13,7 @@ export const certifications = [
   },
   {
     title: "HackerRank - Java Certificate",
-    url: "#",
+    url: "https://www.hackerrank.com/certificates/dcdd0a15af38",
   },
   {
     title: "Hack-Nation Certificate",
