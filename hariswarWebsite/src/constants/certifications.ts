@@ -17,18 +17,22 @@ export const certifications = [
   },
   {
     title: "Hack-Nation Certificate",
-    url: "#",
+    url: "HackNation.png",
   },
     {
     title: "UK AI Agent Hackathon - TOP 15",
-    url: "#",
+    url: "Top15.pdf",
   },
   {
     title: "Disaster Risk Monitoring Using Satellite Imagery",
     url: "disasterRisk.pdf",
   },
-    {
+  {
     title: "Building RAG Agents with LLMs",
     url: "buildingRag.pdf",
+  },
+    {
+    title: "Generative AI with Diffusion Models",
+    url: "diffusion.pdf",
   },
 ];
