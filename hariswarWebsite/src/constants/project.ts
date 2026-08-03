@@ -5,7 +5,7 @@ export const projects = [
     image: "./Tempo.png",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Groq", "Llama-3.3-70B"],
     githubUrl: "https://github.com/Hariswar/Tempo",
-    liveUrl: "https://tempo-steel-seven.vercel.app/auth"
+    liveUrl: "tempo-steel-seven.vercel.app"
   },
   {
     title: "Steam Review Analyzer (SRA)", 
