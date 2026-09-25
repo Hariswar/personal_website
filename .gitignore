@@ -1,0 +1,4 @@
+# The app lives in hariswarWebsite/; nothing at the repo root should be installed or built
+node_modules
+.DS_Store
+.vercel

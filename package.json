@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@tanstack/react-query": "^5.90.16",
-    "@vercel/react-router": "^1.2.4"
-  }
-}
