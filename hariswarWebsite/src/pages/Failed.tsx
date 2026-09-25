@@ -1,8 +1,10 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
+import Background from "@/components/motion/Background";
 
 // when none of the route matches 
-const not_foundPage = () => {
+const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -14,16 +16,24 @@ const not_foundPage = () => {
 
   // displaying the message 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 text-white">404</h1>
-        <p className="text-xl text-gray-400 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-400 underline">
+    <div className="relative isolate min-h-screen flex items-center justify-center bg-background text-foreground px-4">
+      <Background />
+      <div className="text-center animate-fade-in">
+        <h1 className="text-[8rem] leading-none font-extrabold font-playfair text-gradient animate-gradient-x animate-float">404</h1>
+        <p className="font-mono text-terminal-green mt-4 mb-8">
+          <span className="text-terminal-purple">$ </span>cd {location.pathname}: no such page
+          <span className="animate-cursor-blink ml-0.5">█</span>
+        </p>
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-accent text-accent font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+        >
+          <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
           Return to Home
-        </a>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default not_foundPage;
+export default NotFound;

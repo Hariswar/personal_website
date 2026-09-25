@@ -10,8 +10,15 @@ type choice = {
 const ThemeContext = createContext<choice | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark'); // starts with dark theme
-  
+ // starts with the saved choice, otherwise the visitor's system preference
+  const [theme, setTheme] = useState<Theme>(() => {
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') return saved;
+    } catch { /* storage can be blocked, fall through */ }
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  });
+
   // based on which theme it is
   useEffect(() => {
     if (theme === 'dark') {
@@ -21,6 +28,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
+    try {
+      localStorage.setItem('theme', theme);
+    } catch { /* ignore */ }
   }, [theme]);
 
   const toggleTheme = () => {

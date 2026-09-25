@@ -15,7 +15,7 @@ const Introduction = ({ onComplete }: IntroductionProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('/keyboard-typing-sound-effect-33550315.mp3'); // gets the audio file from the public folder
+    const audio = new Audio('/keyboard-typing-sound-effect-335503.mp3'); // gets the audio file from the public folder
     audio.volume = 0.15;
     audioRef.current = audio;
 
@@ -87,22 +87,22 @@ const Introduction = ({ onComplete }: IntroductionProps) => {
   };
 
   return (
-    <h1 className="text-6xl md:text-7xl font-extrabold font-playfair leading-tight -mt-10">
+    <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold font-playfair leading-tight">
       {displayedText.split('\n').map((line, index) => (
         <React.Fragment key={index}>
           {index === 0 ? (
             <span className="text-foreground">{line}</span>
           ) : (
-            <span className="text-primary">
+            <span>
               {line.includes('👋') ? (
                 <>
-                  {line.split('👋')[0]}
-                  <span className="inline-block hover:animate-wave origin-bottom-right cursor-pointer">
+                  <span className="text-gradient animate-gradient-x">{line.split('👋')[0]}</span>
+                  <span className="inline-block animate-wave origin-[70%_70%] cursor-pointer hover:scale-125 transition-transform">
                     👋
                   </span>
                 </>
               ) : (
-                line
+                <span className="text-gradient animate-gradient-x">{line}</span>
               )}
             </span>
           )}
@@ -114,6 +114,7 @@ const Introduction = ({ onComplete }: IntroductionProps) => {
         <div className="mt-3 text-3xl md:text-4xl font-playfair font-bold">
           <span className="text-foreground">{displayedPrefix}</span>
           <span className="text-accent">{displayedRole}</span>
+          <span className="animate-cursor-blink ml-1 text-accent font-light">|</span>
         </div>
       )}
     </h1>

@@ -46,16 +46,16 @@ const ResearchPaperDetail = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Header Image */}
-          <div className="relative overflow-hidden rounded-lg mb-8">
+          <div className="relative overflow-hidden rounded-lg mb-8 animate-fade-in group">
             <img 
               src={paper.image} 
               alt={paper.title}
-              className="w-full h-64 md:h-80 object-cover"
+              className="w-full h-64 md:h-80 object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
           </div>
 
           {/* Paper Information */}
-          <Card className={`mb-8 ${theme === 'dark' ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}`}>
+          <Card className={`mb-8 animate-fade-in [animation-delay:150ms] ${theme === 'dark' ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}`}>
             <CardHeader>
               <CardTitle className="text-3xl mb-4">{paper.title}</CardTitle>
               <CardDescription className="text-lg">{paper.description}</CardDescription>
@@ -86,7 +86,7 @@ const ResearchPaperDetail = () => {
           </Card>
 
           {/* With the details */}
-          <Card className={`mb-8 ${theme === 'dark' ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}`}>
+          <Card className={`mb-8 animate-fade-in [animation-delay:300ms] ${theme === 'dark' ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}`}>
             <CardHeader>
               <CardTitle className="text-xl">Full Paper</CardTitle>
             </CardHeader>

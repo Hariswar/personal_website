@@ -7,8 +7,9 @@ import Layout from "@/layout";
 import ChatBox from "@/components/Terminal"; 
 import TypedIntro from "@/components/Introduction";
 import Scroll from "@/components/Scroll";
+import Magnetic from "@/components/motion/Magnetic";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
 const Page = () => {
@@ -23,8 +24,8 @@ const Page = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
         {/* Left Column - Personal Info */}
         <div className="lg:col-span-5 animate-fade-in">
-          <div className="sticky top-16">
-            <div className="flex items-center gap-2 mb-6">
+          <div className="lg:sticky lg:top-24">
+            <div className="flex items-center gap-2 mb-6 mt-10">
               <div>
                 <TypedIntro onComplete={handleIntroComplete} />
               </div>
@@ -37,14 +38,19 @@ const Page = () => {
             {/* View Resume Button */}
             <Scroll speed={0.01}>
               <div className="mb-12 animate-fade-in" style={{ animationDelay: "0.55s" }}>
-                <a href="/Hariswar_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 rounded-xl flex items-center gap-3 shadow-lg h-auto transition-all duration-300 hover:shadow-accent/40 hover:shadow-xl hover:scale-105 font-sans border-2 border-accent/50"
-                  >
-                    <FileText size={20} />
-                    View Resume
-                  </Button>
-                </a>
+                <Magnetic strength={0.25}>
+                  <a href="/Hariswar_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      className="group relative overflow-hidden bg-accent hover:bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-xl flex items-center gap-3 shadow-lg shadow-accent/20 h-auto transition-all duration-300 hover:shadow-accent/50 hover:shadow-2xl font-sans border-2 border-accent/50"
+                    >
+                      {/* light sweeping across the button */}
+                      <span className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/50 to-transparent animate-shine" />
+                      <FileText size={20} className="transition-transform duration-300 group-hover:-rotate-12" />
+                      View Resume
+                      <ArrowUpRight size={18} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Button>
+                  </a>
+                </Magnetic>
               </div>
             </Scroll>
 

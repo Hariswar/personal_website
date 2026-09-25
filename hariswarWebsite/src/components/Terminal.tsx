@@ -5,7 +5,7 @@ type terminalProps = {
   startTyping?: boolean;
 };
 
-const terminalSetup = ({ startTyping = false }: terminalProps) => {
+const TerminalSetup = ({ startTyping = false }: terminalProps) => {
   const [displayedMessages, setDisplayedMessages] = useState<Array<{ text: string, isUser: boolean, isComplete: boolean }>>([]);
   // shows which message is being typed
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
@@ -107,19 +107,21 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
   };
 
   return (
-    <div className="mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+    <div className="mb-8 animate-fade-in group/terminal relative rounded-lg transition-shadow duration-500 hover:shadow-[0_0_40px_hsl(var(--primary)/0.2)]" style={{ animationDelay: "0.4s" }}>
+      {/* soft glowing border */}
+      <div aria-hidden className="absolute -inset-px rounded-lg bg-gradient-to-br from-primary/40 via-transparent to-terminal-cyan/40 opacity-50 group-hover/terminal:opacity-100 transition-opacity duration-500" />
       {/* Terminal Header*/}
-      <div className="rounded-t-lg bg-terminal-header border border-border px-3 py-2 flex items-center gap-1.5">
-        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+      <div className="relative rounded-t-lg bg-terminal-header border border-border px-3 py-2 flex items-center gap-1.5">
+        <div className="w-2.5 h-2.5 rounded-full bg-red-500/80 transition-transform group-hover/terminal:scale-125"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 transition-transform delay-75 group-hover/terminal:scale-125"></div>
+        <div className="w-2.5 h-2.5 rounded-full bg-green-500/80 transition-transform delay-150 group-hover/terminal:scale-125"></div>
         <span className="ml-3 text-xs text-muted-foreground font-mono">hariswar@portfolio ~ </span>
       </div>
 
       {/* Terminal Body */}
-      <div className="bg-terminal-bg border-x border-b border-border rounded-b-lg p-5 font-mono text-sm min-h-[200px]">
+      <div className="relative bg-terminal-bg border-x border-b border-border rounded-b-lg p-5 font-mono text-sm min-h-[200px]">
         {displayedMessages.map((message, index) => (
-          <div key={index} className="mb-3 leading-relaxed">
+          <div key={index} className="mb-3 leading-relaxed animate-in fade-in slide-in-from-left-2 duration-300">
             <span className={`${message.isUser ? 'text-terminal-yellow' : 'text-terminal-green'
               }`}>
               <span className="text-terminal-purple">{message.isUser ? '// ' : '$ '}</span>
@@ -150,4 +152,4 @@ const terminalSetup = ({ startTyping = false }: terminalProps) => {
   );
 };
 
-export default terminalSetup;
+export default TerminalSetup;

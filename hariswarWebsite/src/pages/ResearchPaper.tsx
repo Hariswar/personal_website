@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { researchPapers } from "@/constants/researchPapers";
-import ParallaxWrapper from "@/components/Scroll";
+import Reveal from "@/components/motion/Reveal";
+import TiltCard from "@/components/motion/TiltCard";
 import { useTheme } from "@/Theme/darkLight";
 import { useState } from "react";
 
@@ -20,23 +21,26 @@ const ResearchPaper = () => {
           <Link to="/">
             <Button
               variant="ghost"
-              className="pl-0 bg-transparent text-[#FBBF24] text-lg md:text-xl hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
+              className="group pl-0 bg-transparent text-[#FBBF24] text-lg md:text-xl hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
             >
-              <ArrowLeft className="mr-2" />
+              <ArrowLeft className="mr-2 transition-transform group-hover:-translate-x-1" />
               Back to Main Page
             </Button>
           </Link>
         </div>
-        <h1 className="text-4xl font-bold mb-8 animate-fade-in">Research Papers</h1>
+        <h1 className="text-4xl md:text-5xl font-bold font-playfair mb-8 animate-fade-in">
+          <span className="text-gradient animate-gradient-x">Research Papers</span>
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {researchPapers.map((paper, index) => (
-            <ParallaxWrapper key={paper.id} className="h-full">
+            <Reveal key={paper.id} delay={(index % 2) * 120} className="h-full">
+              <TiltCard className="h-full rounded-xl" maxTilt={6}>
               <Link to={`/research-paper/${paper.id}`}>
                 <Card
-                  className={`h-full cursor-pointer transition-all duration-300 hover:shadow-lg group ${theme === 'dark'
+                  className={`h-full overflow-hidden backdrop-blur-sm cursor-pointer transition-all duration-300 hover:shadow-lg group ${theme === 'dark'
                       ? 'bg-gray-800/50 border-gray-700'
-                      : 'bg-white border-gray-200'
+                      : 'bg-white/80 border-gray-200'
                     } ${hoveredIndex === index
                       ? theme === 'dark' // when the theme is dark 
                         ? 'border-[#FBBF24]/50 shadow-[#FBBF24]/20'
@@ -50,7 +54,8 @@ const ResearchPaper = () => {
                     <img
                       src={paper.image} // image 
                       alt={paper.title} // title 
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      className="w-full h-48 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
                   </div>
                   <CardContent className="p-6">
@@ -69,7 +74,8 @@ const ResearchPaper = () => {
                   </CardContent>
                 </Card>
               </Link>
-            </ParallaxWrapper>
+              </TiltCard>
+            </Reveal>
           ))}
         </div>
       </div>

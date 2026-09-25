@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
@@ -84,10 +89,31 @@ export default {
           '60%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(0deg)' },
         },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(40px, -60px) scale(1.1)' },
+          '66%': { transform: 'translate(-30px, 30px) scale(0.92)' },
+        },
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        shine: {
+          '0%': { transform: 'translateX(-120%) skewX(-20deg)' },
+          '60%, 100%': { transform: 'translateX(220%) skewX(-20deg)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
       },
 
       animation: {
         wave: 'wave 3s ease-in-out infinite',
+        blob: 'blob 18s ease-in-out infinite',
+        'gradient-x': 'gradient-x 6s ease infinite',
+        shine: 'shine 3.5s ease-in-out infinite',
+        float: 'float 4s ease-in-out infinite',
       },
     }
   },

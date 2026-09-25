@@ -1,6 +1,8 @@
 import { jobExperiences } from "@/constants/jobexperience";
 import { useTheme } from "@/Theme/darkLight";
 import { useState, useEffect, useRef } from "react";
+import Reveal from "@/components/motion/Reveal";
+import SectionHeading from "@/components/motion/SectionHeading";
 
 // sets up direction and others such as bubble 
 export const Experience = () => {
@@ -92,8 +94,8 @@ export const Experience = () => {
   }, []);
 
   return (
-    <div className="mb-10 mt-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-      <h2 className="text-[40px] font-bold mb-8 text-green-400 font-playfair">Experience</h2>
+    <section id="experience" className="mb-10 mt-16">
+      <SectionHeading>Experience</SectionHeading>
 
       <div className="relative" ref={container}>
         {/* this is the floating bubbles */}
@@ -114,7 +116,7 @@ export const Experience = () => {
         </div>
 
         {/* Timeline road with wave animation */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2">
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2">
           <svg className="w-full h-full" preserveAspectRatio="none">
             <line
               x1="50%"
@@ -136,7 +138,7 @@ export const Experience = () => {
         {/* This is for the submarine */}
         <div
           ref={submarineRef}
-          className="absolute left-1/2 -translate-x-1/2 z-20 transition-all duration-300 ease-out pointer-events-none"
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 z-20 transition-all duration-300 ease-out pointer-events-none"
           style={{
             top: `${scrollProgress * 100}%`,
           }}
@@ -221,14 +223,14 @@ export const Experience = () => {
           const isLeft = idx % 2 === 0;
 
           return (
-            <div key={idx} className="relative mb-12 last:mb-0 animate-fade-in" style={{ animationDelay: `${0.7 + idx * 0.2}s` }}>
-              <div className="grid grid-cols-2 gap-8">
-                <div className={isLeft ? '' : 'order-2'}>
+            <Reveal key={idx} direction={isLeft ? 'left' : 'right'} className="relative mb-8 md:mb-12 last:mb-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className={isLeft ? '' : 'md:order-2'}>
                   <div
                     className={`relative rounded-2xl min-h-[320px] shadow-lg ${theme === 'dark'
-                        ? 'bg-gray-900/50 border border-green-500/20 hover:border-yellow-500/50 shadow-black/20'
+                        ? 'bg-gray-900/60 border border-green-500/20 hover:border-yellow-500/50 shadow-black/20'
                         : 'bg-white/80 border border-gray-200 hover:border-yellow-400 shadow-gray-400/20'
-                      } p-7 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] transition-all duration-300 backdrop-blur-sm ${isLeft ? 'ml-auto' : 'mr-auto'
+                      } p-6 md:p-7 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] transition-all duration-300 backdrop-blur-sm ${isLeft ? 'ml-auto' : 'mr-auto'
                       } ${hoveredIndex === idx ? 'animate-card-shake' : ''}`}
                     onMouseEnter={() => {
                       setHoveredIndex(idx);
@@ -277,6 +279,10 @@ export const Experience = () => {
                   >
                     <div className="mb-4">
                       <div className="flex items-center gap-2 mb-3">
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                        </span>
                         <span className={`text-xs font-semibold tracking-wider ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                           {job.period}
                         </span>
@@ -305,13 +311,13 @@ export const Experience = () => {
                     </div>
                   </div>
                 </div>
-                <div className={isLeft ? 'order-2' : ''}></div>
+                <div className={`hidden md:block ${isLeft ? 'md:order-2' : ''}`}></div>
               </div>
-            </div>
+            </Reveal>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
