@@ -23,7 +23,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isHome = pathname === "/";
+  const isHome = pathname === "/portfolio";
   const researchLink = pathname !== "/research-paper";
 
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between animate-fade-in">
-        <Link to="/" className="group flex items-center gap-2 font-playfair text-2xl font-extrabold" aria-label="Home">
+        <Link to="/portfolio" className="group flex items-center gap-2 font-playfair text-2xl font-extrabold" aria-label="Home">
           <span className="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-terminal-cyan text-primary-foreground shadow-lg shadow-primary/30 transition-transform duration-500 group-hover:rotate-[360deg]">
             H
           </span>
@@ -58,6 +58,12 @@ const Navbar = () => {
               ))}
             </ul>
           )}
+          <Link
+            to="/"
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
+          >
+            🛋️ 3D room
+          </Link>
           {researchLink && (
             <Link
               to="/research-paper"

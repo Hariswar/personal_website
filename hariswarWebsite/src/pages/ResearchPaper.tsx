@@ -18,7 +18,7 @@ const ResearchPaper = () => {
     <Layout>
       <div className="container mx-auto px-4">
         <div className="mb-6 animate-fade-in">
-          <Link to="/">
+          <Link to="/portfolio">
             <Button
               variant="ghost"
               className="group pl-0 bg-transparent text-[#FBBF24] text-lg md:text-xl hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
