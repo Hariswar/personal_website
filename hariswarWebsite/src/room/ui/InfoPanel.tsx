@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { X, Github, ExternalLink, ArrowUpRight, Mail, FileText } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaOrcid } from "react-icons/fa";
 import { projects } from "@/constants/project";
 import { jobExperiences } from "@/constants/jobexperience";
 import { socials } from "@/constants/socials";
@@ -13,6 +13,7 @@ const socialIcons: Record<string, ReactNode> = {
   Github: <FaGithub size={18} />,
   LinkedIn: <FaLinkedin size={18} />,
   Instagram: <FaInstagram size={18} />,
+  ORCID: <FaOrcid size={18} />,
   Email: <Mail size={18} />,
 };
 

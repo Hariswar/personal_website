@@ -1,5 +1,20 @@
 export const researchPapers = [
   {
+    id: 5,
+    title: "LLM-Enabled Open-Source Systems in the Wild: An Empirical Study of Vulnerabilities in GitHub Security Advisories",
+    description: "Large language models (LLMs) are increasingly embedded in open-source software (OSS) ecosystems, creating complex interactions among natural language prompts, probabilistic model outputs, and execution-capable components. However, it remains unclear whether traditional vulnerability disclosure frameworks adequately capture these model-mediated risks. To investigate this, we analyze 295 GitHub Security Advisories published between January 2025 and January 2026 that reference LLM-related components, and we manually annotate a sample of 100 advisories using the OWASP Top 10 for LLM Applications 2025. We find no evidence of new implementation-level weakness classes specific to LLM systems. Most advisories map to established CWEs, particularly injection and deserialization weaknesses. At the same time, the OWASP-based analysis reveals recurring architectural risk patterns, especially Supply Chain, Excessive Agency, and Prompt Injection, which often co-occur across multiple stages of execution. These results suggest that existing advisory metadata captures code-level defects but underrepresents model-mediated exposure. We conclude that combining the CWE and OWASP perspectives provides a more complete and necessary view of vulnerabilities in LLM-integrated systems.",
+    image: "/llm-security-paper.svg",
+    authors: ["Fariha Tanjim Shifat", "Hariswar Baburaj", "Ce Zhou", "Jaydeb Sarker", "Mia Mohammad Imran"],
+    publicationDate: "July 2026",
+    journal: "The 2nd International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2026)",
+    venue: "LLMSC 2026", // shown as a "Published" badge
+    keywords: ["LLM Security", "GitHub Security Advisories", "OWASP Top 10 for LLM Applications", "CWE", "Supply Chain", "Prompt Injection", "Excessive Agency", "Open-Source Software"],
+    fullContent: "",
+    pdfUrl: "https://arxiv.org/pdf/2604.04288",
+    arxivUrl: "https://arxiv.org/abs/2604.04288",
+    doiUrl: "https://doi.org/10.1145/3803437.3805532",
+  },
+  {
     id: 1,
     title: "The Progression of Home Console Operating Systems",
     description: "We researched the usage of different Operating Systems for different console game companies. With every new console generation comes the debate of which game console is the “best”. Rather than using subjective and biased opinions, we aim to explore and uncover what difference in their operating system sets them apart. We will be comparing the performance, memory management, and scheduling of each console’s Operating System. From these parts, we hope to find the reason for each console's performance and how these decisions impact the overall system performance and user satisfaction. Operating systems (OSs) serve the critical role of connecting the hardware and software of a device. As the hardware continues to improve and the needs of the software continue to rise, OSs must improve to meet these needs. The gaming industry serves as an interesting microcosm of this three-way race. By researching the three major gaming companies, Nintendo, Sony, and Microsoft, we can analyze how the progression of hardware and each company's goals impacted the OSs they designed. We found that Sony built its OSs with an emphasis on maximum performance, Microsoft built theirs off of Windows for both compatibility and ease of implementation, and Nintendo built theirs to be as minimal as possible to support cheaper and more accessible hardware.",

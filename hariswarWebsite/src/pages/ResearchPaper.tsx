@@ -57,6 +57,11 @@ const ResearchPaper = () => {
                       loading="lazy"
                       className="w-full h-48 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
+                    {paper.venue && (
+                      <span className="absolute top-3 left-3 rounded-full bg-[#FBBF24] px-3 py-1 text-xs font-semibold text-black shadow-lg">
+                        Published · {paper.venue}
+                      </span>
+                    )}
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">

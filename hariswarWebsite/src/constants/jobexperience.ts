@@ -4,7 +4,7 @@ export const jobExperiences = [
     company: "Missouri University of Science and Technology",
     location: "Rolla, MO",
     period: "January 2026 - Present",
-    description: "We submitted a research paper on “LLM-enabled Open-Source System in the Wild: An Empirical Study of Vulnerabilities in GitHub Security Advisories.” In this study, we analyzed 295 GitHub Security Advisories (Jan 2025 to Jan 2026) and manually classified the 133 affected packages. From these, we randomly sampled and manually annotated 100 advisories using the OWASP Top 10 for LLM Applications. The paper ended up getting accepted for the 2nd International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2026) conference to be held on July 5, 2026, in Montreal, Canada. ",
+    description: "We submitted a research paper on “LLM-enabled Open-Source System in the Wild: An Empirical Study of Vulnerabilities in GitHub Security Advisories.” In this study, we analyzed 295 GitHub Security Advisories (Jan 2025 to Jan 2026) and manually classified the 133 affected packages. From these, we randomly sampled and manually annotated 100 advisories using the OWASP Top 10 for LLM Applications. The paper was accepted and published at the 2nd International Workshop on Large Language Model Supply Chain Analysis (LLMSC 2026), held on July 5, 2026, in Montreal, Canada. ",
     technologies: ["Python", "Excell", "Latex"],
     icon: ""
   },

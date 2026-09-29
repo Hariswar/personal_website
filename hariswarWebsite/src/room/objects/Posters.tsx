@@ -79,9 +79,19 @@ const Posters = () => {
     ctx.font = '600 26px "JetBrains Mono", monospace';
     ctx.fillStyle = "#7ad7ff";
     ctx.fillText(`${researchPapers.length} papers & reports`, w / 2, 430);
+    const published = researchPapers.find((p) => "venue" in p && p.venue);
+    if (published && "venue" in published) {
+      ctx.fillStyle = "#ffb46b";
+      ctx.beginPath();
+      ctx.roundRect(w / 2 - 170, 490, 340, 50, 25);
+      ctx.fill();
+      ctx.fillStyle = "#1a1206";
+      ctx.font = '700 24px "Inter", sans-serif';
+      ctx.fillText(`★ Published · ${published.venue}`, w / 2, 524);
+    }
     ctx.font = '500 20px "Inter", sans-serif';
     ctx.fillStyle = "rgba(232,244,255,0.7)";
-    ctx.fillText("read them all ↗", w / 2, 470);
+    ctx.fillText("read them all ↗", w / 2, 590);
   });
 
   return (

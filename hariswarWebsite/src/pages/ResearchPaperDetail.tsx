@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Calendar, Users, BookOpen, FileText } from "lucide-react";
+import { ArrowLeft, Calendar, Users, BookOpen, FileText, ExternalLink } from "lucide-react";
 import { researchPapers } from "@/constants/researchPapers";
 import { useTheme } from "@/Theme/darkLight";
 
@@ -57,6 +57,11 @@ const ResearchPaperDetail = () => {
           {/* Paper Information */}
           <Card className={`mb-8 animate-fade-in [animation-delay:150ms] ${theme === 'dark' ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-200'}`}>
             <CardHeader>
+              {paper.venue && (
+                <span className="self-start rounded-full bg-[#FBBF24] px-3 py-1 text-xs font-semibold text-black">
+                  Published · {paper.venue}
+                </span>
+              )}
               <CardTitle className="text-3xl mb-4">{paper.title}</CardTitle>
               <CardDescription className="text-lg">{paper.description}</CardDescription>
               
@@ -91,16 +96,18 @@ const ResearchPaperDetail = () => {
               <CardTitle className="text-xl">Full Paper</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="prose prose-gray max-w-none">
-                {paper.fullContent.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4 text-muted-foreground leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              
-              {/* PDF of the paper */}
-              <div className="mt-8 pt-6 border-t border-border">
+              {paper.fullContent && (
+                <div className="prose prose-gray max-w-none mb-8">
+                  {paper.fullContent.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="mb-4 text-muted-foreground leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {/* PDF of the paper, plus the published record when there is one */}
+              <div className={`flex flex-wrap gap-3 ${paper.fullContent ? "pt-6 border-t border-border" : ""}`}>
                 <a 
                   href={paper.pdfUrl} 
                   target="_blank" 
@@ -114,6 +121,22 @@ const ResearchPaperDetail = () => {
                     Full paper
                   </Button>
                 </a>
+                {paper.doiUrl && (
+                  <a href={paper.doiUrl} target="_blank" rel="noopener noreferrer" className="inline-block">
+                    <Button variant="outline" className="font-semibold border-[#FBBF24]/60 hover:bg-[#FBBF24]/10">
+                      <ExternalLink className="mr-2" />
+                      ACM DOI
+                    </Button>
+                  </a>
+                )}
+                {paper.arxivUrl && (
+                  <a href={paper.arxivUrl} target="_blank" rel="noopener noreferrer" className="inline-block">
+                    <Button variant="outline" className="font-semibold border-[#FBBF24]/60 hover:bg-[#FBBF24]/10">
+                      <ExternalLink className="mr-2" />
+                      arXiv
+                    </Button>
+                  </a>
+                )}
               </div>
             </CardContent>
           </Card>

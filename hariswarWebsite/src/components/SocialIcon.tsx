@@ -1,5 +1,5 @@
 import { socials } from "@/constants/socials";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaOrcid } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { useTheme } from "@/Theme/darkLight";
 import Magnetic from "@/components/motion/Magnetic";
@@ -22,6 +22,11 @@ const socialIcon = {
     icon: <FaInstagram size={26} />, 
     color: "#E4405F", 
     shadow: "rgba(228, 64, 95, 0.4)" 
+  },
+  ORCID: { 
+    icon: <FaOrcid size={26} />, 
+    color: "#A6CE39", 
+    shadow: "rgba(166, 206, 57, 0.4)" 
   },
   Email: { 
     icon: <MdEmail size={26} />, 

@@ -12,6 +12,10 @@ export const socials = [
     url: "https://instagram.com"
   },
   {
+    platform: "ORCID",
+    url: "https://orcid.org/0009-0000-4663-8112"
+  },
+  {
     platform: "Email",
     url: "mailto:bkhariswar@gmail.com"
   }
