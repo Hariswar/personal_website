@@ -1,6 +1,6 @@
 // Every clickable spot in the room and where the camera goes to look at it.
 
-export type StationId = "monitor" | "bookshelf" | "whiteboard" | "posters" | "phone";
+export type StationId = "monitor" | "bookshelf" | "whiteboard" | "experience" | "research" | "phone";
 
 export type Vec3 = [number, number, number];
 
@@ -50,15 +50,25 @@ export const stations: Record<StationId, Station> = {
     fit: [1.75, 1.15],
     labelAt: [-2.8, 2.4, -0.9],
   },
-  posters: {
-    id: "posters",
+  experience: {
+    id: "experience",
     label: "Experience",
     short: "Experience",
-    emoji: "🖼️",
-    target: [-1.6, 1.84, -2.98],
+    emoji: "💼",
+    target: [-1.98, 1.8, -2.98],
     direction: [0.1, 0, 1],
-    fit: [1.5, 1.1],
-    labelAt: [-1.6, 2.55, -2.9],
+    fit: [0.8, 1.05],
+    labelAt: [-1.98, 2.42, -2.9],
+  },
+  research: {
+    id: "research",
+    label: "Research",
+    short: "Research",
+    emoji: "🔬",
+    target: [-1.2, 1.98, -2.98],
+    direction: [0.1, 0, 1],
+    fit: [0.65, 0.8],
+    labelAt: [-1.2, 2.47, -2.9],
   },
   phone: {
     id: "phone",
@@ -72,7 +82,7 @@ export const stations: Record<StationId, Station> = {
   },
 };
 
-export const stationOrder: StationId[] = ["monitor", "bookshelf", "whiteboard", "posters", "phone"];
+export const stationOrder: StationId[] = ["monitor", "bookshelf", "whiteboard", "experience", "research", "phone"];
 
 // The wide shot of the whole room
 export const overview = {

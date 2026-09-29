@@ -3,6 +3,7 @@ import { X, Github, ExternalLink, ArrowUpRight, Mail, FileText } from "lucide-re
 import { FaGithub, FaLinkedin, FaInstagram, FaOrcid } from "react-icons/fa";
 import { projects } from "@/constants/project";
 import { jobExperiences } from "@/constants/jobexperience";
+import { researchPapers } from "@/constants/researchPapers";
 import { socials } from "@/constants/socials";
 import { currentlyLearning } from "@/constants/room";
 import { skills, courses } from "../skills";
@@ -47,7 +48,8 @@ const InfoPanel = ({ station, onClose }: { station: StationId | null; onClose: (
             {shown === "monitor" && <ProjectsList />}
             {shown === "bookshelf" && <Skills />}
             {shown === "whiteboard" && <Learning />}
-            {shown === "posters" && <Experience />}
+            {shown === "experience" && <Experience />}
+            {shown === "research" && <Research />}
             {shown === "phone" && <Contact />}
           </div>
         </>
@@ -134,20 +136,35 @@ const Learning = () => (
 );
 
 const Experience = () => (
+  <ol className="relative border-l border-white/15 ml-2 space-y-6">
+    {jobExperiences.map((job, i) => (
+      <li key={job.title} className="pl-5 relative room-stagger" style={{ animationDelay: `${i * 70}ms` }}>
+        <span className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-[#ffb46b] shadow-[0_0_10px_#ffb46b]" />
+        <div className="text-xs font-mono text-slate-400">{job.period}</div>
+        <h3 className="text-lg font-semibold text-white mt-0.5">{job.title}</h3>
+        <div className="text-sm text-[#7fb2ff]">{job.company} · {job.location}</div>
+        <p className="text-sm text-slate-300 mt-2 line-clamp-4">{job.description}</p>
+      </li>
+    ))}
+  </ol>
+);
+
+const Research = () => (
   <>
-    <ol className="relative border-l border-white/15 ml-2 space-y-6">
-      {jobExperiences.map((job, i) => (
-        <li key={job.title} className="pl-5 relative room-stagger" style={{ animationDelay: `${i * 70}ms` }}>
-          <span className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-[#ffb46b] shadow-[0_0_10px_#ffb46b]" />
-          <div className="text-xs font-mono text-slate-400">{job.period}</div>
-          <h3 className="text-lg font-semibold text-white mt-0.5">{job.title}</h3>
-          <div className="text-sm text-[#7fb2ff]">{job.company} · {job.location}</div>
-          <p className="text-sm text-slate-300 mt-2 line-clamp-4">{job.description}</p>
-        </li>
+    <div className="space-y-4">
+      {researchPapers.map((paper, i) => (
+        <Link key={paper.id} to={`/research-paper/${paper.id}`} className="room-card block group room-stagger" style={{ animationDelay: `${i * 60}ms` }}>
+          <div className="flex items-center justify-between gap-3 text-xs font-mono text-slate-400">
+            <span>{paper.publicationDate}</span>
+            {"venue" in paper && paper.venue && <span className="text-[#ffb46b]">★ {paper.venue}</span>}
+          </div>
+          <h3 className="text-lg font-semibold text-white mt-1 group-hover:text-[#7fb2ff] transition-colors">{paper.title}</h3>
+          <p className="text-sm text-slate-300 mt-1 line-clamp-3">{paper.description}</p>
+        </Link>
       ))}
-    </ol>
+    </div>
     <Link to="/research-paper" className="room-btn room-btn-accent mt-8 w-full justify-center">
-      Read my research papers <ArrowUpRight size={16} />
+      All research papers <ArrowUpRight size={16} />
     </Link>
   </>
 );

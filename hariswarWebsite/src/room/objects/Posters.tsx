@@ -95,10 +95,14 @@ const Posters = () => {
   });
 
   return (
-    <Station id="posters">
-      <Frame position={[-1.98, 1.8, -2.985]} size={[0.62, 0.88]} texture={experienceTex} />
-      <Frame position={[-1.2, 1.98, -2.985]} size={[0.48, 0.62]} texture={researchTex} />
-    </Station>
+    <>
+      <Station id="experience">
+        <Frame position={[-1.98, 1.8, -2.985]} size={[0.62, 0.88]} texture={experienceTex} />
+      </Station>
+      <Station id="research">
+        <Frame position={[-1.2, 1.98, -2.985]} size={[0.48, 0.62]} texture={researchTex} />
+      </Station>
+    </>
   );
 };
 
