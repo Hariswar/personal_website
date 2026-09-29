@@ -29,6 +29,7 @@ export const projects = [
     image: "./Nourishly.png",
     technologies: ["Angular","C#",".NET", "PostgreSQL"],
     githubUrl: "https://github.com/Hariswar/Nourishly",
+    liveUrl: "https://nourishly-nine.vercel.app/home",
   },
   {
     title: "Sketch to Sky", 
