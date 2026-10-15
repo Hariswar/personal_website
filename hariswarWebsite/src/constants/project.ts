@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "BlockHistory",
     description: "Developed a web-based application that can allow the users to explore the history of any address in Carondelet, St. Louis, using 1938 fire-insurance maps from the Library of Congress to identify possible areas of past contamination like gas stations, foundries, dry cleaners and chemical plants. Built a multi-agent pipeline that reads 1,480 map images with Claude Haiku in order to find businesses and gas tanks. Found 87% of sites with 91% accuracy measured against the manual annotations.",
-    image: "",
+    image: "./BlockHistory.png",
     technologies: ["Python", "Next.js", "TypeScript", "MapLibre GL", "PostGIS", "Tesseract OCR", "Claude API"],
     githubUrl: "https://github.com/Hariswar/BlockHistory",
     liveUrl: "https://block-history.vercel.app",
