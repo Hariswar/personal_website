@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "BlockHistory",
+    description: "Developed a web-based application that can allow the users to explore the history of any address in Carondelet, St. Louis, using 1938 fire-insurance maps from the Library of Congress to identify possible areas of past contamination like gas stations, foundries, dry cleaners and chemical plants. Built a multi-agent pipeline that reads 1,480 map images with Claude Haiku in order to find businesses and gas tanks. Found 87% of sites with 91% accuracy measured against the manual annotations.",
+    image: "",
+    technologies: ["Python", "Next.js", "TypeScript", "MapLibre GL", "PostGIS", "Tesseract OCR", "Claude API"],
+    githubUrl: "https://github.com/Hariswar/BlockHistory",
+    liveUrl: "https://block-history.vercel.app",
+  },
+  {
     title: "Tempo", 
     description: "The main objective of Tempo is to change calendar management from a manual process to an agentic system that only require human approval. The system is developed to automatically detect scheduling issues and inefficiencies during event creation. The agent is then able to provide suggestions of different time slots with the added context of user behavior such as the type of meeting and the location of the users. Tempo can suggest solutions, track locations and can understand the context of events like what kind of meeting it is and how important it is based on user;s preference. Overall, Tempo is an AI Smart Calendar app that detects and solves conflicts as they happen by providing optimized aternatives instead of just making manual decisions.", 
     image: "./Tempo.png",
