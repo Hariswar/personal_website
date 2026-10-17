@@ -4,23 +4,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Users, BookOpen, FileText, ExternalLink } from "lucide-react";
-import { researchPapers } from "@/constants/researchPapers";
+import { allPapers } from "@/constants/researchPapers";
 import { useTheme } from "@/Theme/darkLight";
 
 // With the research paper deatils 
 const ResearchPaperDetail = () => {
   const { id } = useParams();
   const { theme } = useTheme();
-  const paper = researchPapers.find(p => p.id === parseInt(id || "0"));
+  const paper = allPapers.find(p => p.id === parseInt(id || "0"));
 
   if (!paper) {
     return (
       <Layout>
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Research Paper Not Found</h1>
+            <h1 className="text-2xl font-bold mb-4">Paper Not Found</h1>
             <Link to="/research-paper">
-              <Button>Back to Research Papers</Button>
+              <Button>Back to Papers</Button>
             </Link>
           </div>
         </div>
@@ -39,7 +39,7 @@ const ResearchPaperDetail = () => {
               className="pl-0 bg-transparent text-[#FBBF24] text-lg md:text-xl hover:bg-[#FBBF24]/10 hover:scale-105 transition-all duration-200"
               >
                 <ArrowLeft className="mr-2" />
-                Back to Research Papers
+                Back to Papers
             </Button>
           </Link>
         </div>

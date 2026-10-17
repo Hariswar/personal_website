@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { researchPapers } from "@/constants/researchPapers";
+import { researchPapers, coursePapers, type Paper } from "@/constants/researchPapers";
 import Reveal from "@/components/motion/Reveal";
 import TiltCard from "@/components/motion/TiltCard";
 import { useTheme } from "@/Theme/darkLight";
@@ -13,6 +13,61 @@ import { useState } from "react";
 const ResearchPaper = () => {
   const { theme } = useTheme();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // Grid of paper cards
+  const renderPapers = (papers: Paper[]) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {papers.map((paper, index) => (
+        <Reveal key={paper.id} delay={(index % 2) * 120} className="h-full">
+          <TiltCard className="h-full rounded-xl" maxTilt={6}>
+          <Link to={`/research-paper/${paper.id}`}>
+            <Card
+              className={`h-full overflow-hidden backdrop-blur-sm cursor-pointer transition-all duration-300 hover:shadow-lg group ${theme === 'dark'
+                  ? 'bg-gray-800/50 border-gray-700'
+                  : 'bg-white/80 border-gray-200'
+                } ${hoveredIndex === paper.id
+                  ? theme === 'dark' // when the theme is dark 
+                    ? 'border-[#FBBF24]/50 shadow-[#FBBF24]/20'
+                    : 'border-[#FBBF24]/50 shadow-[#FBBF24]/20'
+                  : ''
+                }`}
+              onMouseEnter={() => setHoveredIndex(paper.id)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className="relative overflow-hidden rounded-t-lg">
+                <img
+                  src={paper.image} // image 
+                  alt={paper.title} // title 
+                  loading="lazy"
+                  className="w-full h-48 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+                {paper.venue && (
+                  <span className="absolute top-3 left-3 rounded-full bg-[#FBBF24] px-3 py-1 text-xs font-semibold text-black shadow-lg">
+                    Published · {paper.venue}
+                  </span>
+                )}
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <CardTitle className="text-xl mb-2 group-hover:text-[#FBBF24] transition-colors">
+                    {paper.title}
+                  </CardTitle>
+                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-[#FBBF24] transition-colors ml-2 flex-shrink-0" />
+                </div>
+                <CardDescription className="text-sm text-muted-foreground line-clamp-3">
+                  {paper.description} 
+                </CardDescription>
+                <div className="mt-4 text-xs text-muted-foreground">
+                  {paper.authors.join(", ")} • {paper.publicationDate}
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+          </TiltCard>
+        </Reveal>
+      ))}
+    </div>
+  );
 
   return (
     <Layout>
@@ -29,60 +84,15 @@ const ResearchPaper = () => {
           </Link>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold font-playfair mb-8 animate-fade-in">
-          <span className="text-gradient animate-gradient-x">Research Papers</span>
+          <span className="text-gradient animate-gradient-x">Research</span>
         </h1>
+        {renderPapers(researchPapers)}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {researchPapers.map((paper, index) => (
-            <Reveal key={paper.id} delay={(index % 2) * 120} className="h-full">
-              <TiltCard className="h-full rounded-xl" maxTilt={6}>
-              <Link to={`/research-paper/${paper.id}`}>
-                <Card
-                  className={`h-full overflow-hidden backdrop-blur-sm cursor-pointer transition-all duration-300 hover:shadow-lg group ${theme === 'dark'
-                      ? 'bg-gray-800/50 border-gray-700'
-                      : 'bg-white/80 border-gray-200'
-                    } ${hoveredIndex === index
-                      ? theme === 'dark' // when the theme is dark 
-                        ? 'border-[#FBBF24]/50 shadow-[#FBBF24]/20'
-                        : 'border-[#FBBF24]/50 shadow-[#FBBF24]/20'
-                      : ''
-                    }`}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={paper.image} // image 
-                      alt={paper.title} // title 
-                      loading="lazy"
-                      className="w-full h-48 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                    />
-                    {paper.venue && (
-                      <span className="absolute top-3 left-3 rounded-full bg-[#FBBF24] px-3 py-1 text-xs font-semibold text-black shadow-lg">
-                        Published · {paper.venue}
-                      </span>
-                    )}
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <CardTitle className="text-xl mb-2 group-hover:text-[#FBBF24] transition-colors">
-                        {paper.title}
-                      </CardTitle>
-                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-[#FBBF24] transition-colors ml-2 flex-shrink-0" />
-                    </div>
-                    <CardDescription className="text-sm text-muted-foreground line-clamp-3">
-                      {paper.description} 
-                    </CardDescription>
-                    <div className="mt-4 text-xs text-muted-foreground">
-                      {paper.authors.join(", ")} • {paper.publicationDate}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold font-playfair mt-16 mb-2 animate-fade-in">
+          <span className="text-gradient animate-gradient-x">Course Papers</span>
+        </h2>
+        <p className="text-muted-foreground mb-8">Papers and reports written for classes at Missouri S&amp;T.</p>
+        {renderPapers(coursePapers)}
       </div>
     </Layout>
   );

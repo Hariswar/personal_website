@@ -1,4 +1,21 @@
-export const researchPapers = [
+export type Paper = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  authors: string[];
+  publicationDate: string;
+  journal: string;
+  venue?: string; // shown as a "Published" badge
+  keywords: string[];
+  fullContent: string;
+  pdfUrl: string;
+  arxivUrl?: string;
+  doiUrl?: string;
+};
+
+// Officially published research
+export const researchPapers: Paper[] = [
   {
     id: 5,
     title: "LLM-Enabled Open-Source Systems in the Wild: An Empirical Study of Vulnerabilities in GitHub Security Advisories",
@@ -13,7 +30,11 @@ export const researchPapers = [
     pdfUrl: "https://arxiv.org/pdf/2604.04288",
     arxivUrl: "https://arxiv.org/abs/2604.04288",
     doiUrl: "https://doi.org/10.1145/3803437.3805532",
-  },
+  }
+]
+
+// Papers written for classes (not published)
+export const coursePapers: Paper[] = [
   {
     id: 1,
     title: "The Progression of Home Console Operating Systems",
@@ -290,3 +311,7 @@ molecular descriptors and their effects on the toxicity of various chemicals.
     pdfUrl: "/Microcontrollers_Smartwatches.pdf"
   }
 ]
+
+
+// Every paper, for lookups by id
+export const allPapers: Paper[] = [...researchPapers, ...coursePapers]

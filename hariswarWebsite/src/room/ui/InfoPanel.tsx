@@ -3,7 +3,7 @@ import { X, Github, ExternalLink, ArrowUpRight, Mail, FileText } from "lucide-re
 import { FaGithub, FaLinkedin, FaInstagram, FaOrcid } from "react-icons/fa";
 import { projects } from "@/constants/project";
 import { jobExperiences } from "@/constants/jobexperience";
-import { researchPapers } from "@/constants/researchPapers";
+import { researchPapers, coursePapers, type Paper } from "@/constants/researchPapers";
 import { socials } from "@/constants/socials";
 import { currentlyLearning } from "@/constants/room";
 import { skills, courses } from "../skills";
@@ -149,22 +149,28 @@ const Experience = () => (
   </ol>
 );
 
+const PaperList = ({ papers }: { papers: Paper[] }) => (
+  <div className="space-y-4">
+    {papers.map((paper, i) => (
+      <Link key={paper.id} to={`/research-paper/${paper.id}`} className="room-card block group room-stagger" style={{ animationDelay: `${i * 60}ms` }}>
+        <div className="flex items-center justify-between gap-3 text-xs font-mono text-slate-400">
+          <span>{paper.publicationDate}</span>
+          {paper.venue && <span className="text-[#ffb46b]">★ {paper.venue}</span>}
+        </div>
+        <h3 className="text-lg font-semibold text-white mt-1 group-hover:text-[#7fb2ff] transition-colors">{paper.title}</h3>
+        <p className="text-sm text-slate-300 mt-1 line-clamp-3">{paper.description}</p>
+      </Link>
+    ))}
+  </div>
+);
+
 const Research = () => (
   <>
-    <div className="space-y-4">
-      {researchPapers.map((paper, i) => (
-        <Link key={paper.id} to={`/research-paper/${paper.id}`} className="room-card block group room-stagger" style={{ animationDelay: `${i * 60}ms` }}>
-          <div className="flex items-center justify-between gap-3 text-xs font-mono text-slate-400">
-            <span>{paper.publicationDate}</span>
-            {"venue" in paper && paper.venue && <span className="text-[#ffb46b]">★ {paper.venue}</span>}
-          </div>
-          <h3 className="text-lg font-semibold text-white mt-1 group-hover:text-[#7fb2ff] transition-colors">{paper.title}</h3>
-          <p className="text-sm text-slate-300 mt-1 line-clamp-3">{paper.description}</p>
-        </Link>
-      ))}
-    </div>
+    <PaperList papers={researchPapers} />
+    <h3 className="text-xs font-mono uppercase tracking-widest text-slate-400 mt-8 mb-4">Course papers</h3>
+    <PaperList papers={coursePapers} />
     <Link to="/research-paper" className="room-btn room-btn-accent mt-8 w-full justify-center">
-      All research papers <ArrowUpRight size={16} />
+      All papers <ArrowUpRight size={16} />
     </Link>
   </>
 );

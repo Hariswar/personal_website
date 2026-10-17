@@ -69,7 +69,7 @@ const Navbar = () => {
               to="/research-paper"
               className="px-4 sm:px-6 py-2.5 rounded-lg border-2 border-accent text-accent font-medium text-sm sm:text-base tracking-wide hover:bg-accent hover:text-accent-foreground hover:shadow-[0_0_24px_hsl(var(--accent)/0.45)] transition-all duration-300"
             >
-              Research Paper
+              Research & Papers
             </Link>
           )}
           <ThemeToggle />

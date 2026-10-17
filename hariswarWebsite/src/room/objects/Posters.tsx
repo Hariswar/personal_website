@@ -2,7 +2,7 @@ import type * as THREE from "three";
 import Station from "./Station";
 import { useCanvasTexture, wrapText } from "../canvasTexture";
 import { jobExperiences } from "@/constants/jobexperience";
-import { researchPapers } from "@/constants/researchPapers";
+import { researchPapers, allPapers } from "@/constants/researchPapers";
 
 // Two framed posters on the back wall: a career "tour poster" and a research poster
 const Posters = () => {
@@ -78,9 +78,9 @@ const Posters = () => {
     ctx.fillText("RESEARCH", w / 2, 100);
     ctx.font = '600 26px "JetBrains Mono", monospace';
     ctx.fillStyle = "#7ad7ff";
-    ctx.fillText(`${researchPapers.length} papers & reports`, w / 2, 430);
-    const published = researchPapers.find((p) => "venue" in p && p.venue);
-    if (published && "venue" in published) {
+    ctx.fillText(`${allPapers.length} papers & reports`, w / 2, 430);
+    const published = researchPapers.find((p) => p.venue);
+    if (published?.venue) {
       ctx.fillStyle = "#ffb46b";
       ctx.beginPath();
       ctx.roundRect(w / 2 - 170, 490, 340, 50, 25);
